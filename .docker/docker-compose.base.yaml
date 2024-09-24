@@ -29,8 +29,8 @@ services:
       - --storage.tsdb.retention.time=${PROMETHEUS_STORAGE_TSDB_RETENTION_TIME}
     restart: always
     volumes:
-      - ./configs/gpu-metrics-prometheus-config.yaml:/etc/prometheus/prometheus.yml:ro
-      - ./workspace/prometheus_data:/prometheus
+      - $PWD/configs/gpu-metrics-prometheus-config.yaml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
     networks:
       - gpu_metrics
   grafana:
@@ -42,9 +42,9 @@ services:
       - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER}
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD}
     volumes:
-      - ./workspace/grafana_data:/var/lib/grafana
-      - ./configs/grafana_provisioning:/etc/grafana/provisioning:ro
-      - ./configs/grafana_dashboards:/etc/dashboards:ro
+      - grafana_data:/var/lib/grafana
+      - $PWD/configs/grafana_provisioning:/etc/grafana/provisioning:ro
+      - $PWD/configs/grafana_dashboards:/etc/dashboards:ro
     networks:
       - gpu_metrics
 
