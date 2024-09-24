@@ -15,4 +15,4 @@ Run the following command to launch containers:
 make docker-up
 ```
 
-Then you can access http://localhost:19300 for Grafana Dashboard (default username: _admin_, password: _admin_).
+Then you can access http://localhost:13000 (http://172.16.229.32:13000) for Grafana Dashboard (default username: _admin_, password: _admin_).
