@@ -5,7 +5,9 @@
 ## Prerequisites
 
 1. [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
-2. [Docker Compose](https://docs.docker.com/compose/install/). Please make sure your docker-compose supports Compose file format [version 3.x](https://docs.docker.com/compose/compose-file/compose-versioning/).
+2. [Docker Compose](https://docs.docker.com/compose/install/). 
+
+Please make sure your docker-compose supports Compose file format [version 3.x](https://docs.docker.com/compose/compose-file/compose-versioning/).
 
 ## Set Up
 
@@ -15,4 +17,4 @@ Run the following command to launch containers:
 make docker-up
 ```
 
-Then you can access http://localhost:13000 (http://172.16.229.32:13000) for Grafana Dashboard (default username: _admin_, password: _admin_).
+Then you can access http://localhost:13000 for Grafana Dashboard (default username: _admin_, password: _admin_).
